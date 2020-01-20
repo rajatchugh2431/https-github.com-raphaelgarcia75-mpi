@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MPI_TestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MPI_Test.dbo.mas_patient' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="mas_patient">
+          <Key>
+            <PropertyRef Name="Medical record number" />
+          </Key>
+          <Property Name="Medical record number" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="patient Number" Type="nvarchar" MaxLength="7" />
+          <Property Name="patient Name" Type="nvarchar" MaxLength="26" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MPI_Test.dbo.Sheet1$' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Sheet1$">
+          <Key>
+            <PropertyRef Name="Ambulatory Surgery" />
+          </Key>
+          <Property Name="Ambulatory Surgery" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="500" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="SQLSmartAuditData">
+          <Key>
+            <PropertyRef Name="AuditId" />
+          </Key>
+          <Property Name="AuditId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AuditDateTime" Type="datetime" Nullable="false" />
+          <Property Name="AuditType" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="AuditTable" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="AuditUser" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="AuditMachine" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="AuditApp" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="AuditData" Type="text" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MPI_Test.dbo.tblExceptionsLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblExceptionsLog">
+          <Key>
+            <PropertyRef Name="ProcessingDate" />
+          </Key>
+          <Property Name="NumberofRecords" Type="int" />
+          <Property Name="RecordsImported" Type="int" />
+          <Property Name="RecordsToAppend" Type="int" />
+          <Property Name="RecordsNotAppended" Type="int" />
+          <Property Name="RecordsToAppend2" Type="int" />
+          <Property Name="RecordsNotAppended2" Type="int" />
+          <Property Name="RecordsToDelete" Type="int" />
+          <Property Name="RecordsNotDeleted" Type="int" />
+          <Property Name="RecordsToDelete2" Type="int" />
+          <Property Name="RecordsNotDeleted2" Type="int" />
+          <Property Name="RecordsToUpdate" Type="int" />
+          <Property Name="RecordsNotUpdated" Type="int" />
+          <Property Name="RecordsToUpdate2" Type="int" />
+          <Property Name="RecordsNotUpdated2" Type="int" />
+          <Property Name="ProcessingDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="ExceptionsProcessed" Type="nvarchar" MaxLength="1" />
+          <Property Name="s_ColLineage" Type="image" />
+          <Property Name="s_Generation" Type="int" />
+          <Property Name="s_GUID" Type="uniqueidentifier" />
+          <Property Name="s_Lineage" Type="image" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MPI_Test.dbo.tblLog' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblLog">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="text" Nullable="false" />
+          <Property Name="mr" Type="text" />
+          <Property Name="account_number" Type="text" />
+          <Property Name="date_time" Type="datetime" />
+          <Property Name="patient_name" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MPI_Test.dbo.tblMasterPatientIndex' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblMasterPatientIndex">
+          <Key>
+            <PropertyRef Name="Flag" />
+          </Key>
+          <Property Name="Flag" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Patient Number" Type="char" MaxLength="7" />
+          <Property Name="Patient Name" Type="varchar" MaxLength="26" />
+          <Property Name="Patient Street" Type="varchar" MaxLength="25" />
+          <Property Name="Patient City" Type="varchar" MaxLength="15" />
+          <Property Name="Patient State" Type="char" MaxLength="2" />
+          <Property Name="Patient Zip Code" Type="char" MaxLength="5" />
+          <Property Name="Patient Phone" Type="varchar" MaxLength="12" />
+          <Property Name="Social Security Number" Type="varchar" MaxLength="11" />
+          <Property Name="Date Of Birth" Type="varchar" MaxLength="10" />
+          <Property Name="Sex Code" Type="char" MaxLength="1" />
+          <Property Name="Marital Status" Type="char" MaxLength="1" />
+          <Property Name="Race Code" Type="char" MaxLength="2" />
+          <Property Name="Religion Code" Type="char" MaxLength="2" />
+          <Property Name="Medicare Number" Type="varchar" MaxLength="13" />
+          <Property Name="Medicaid Number" Type="varchar" MaxLength="12" />
+          <Property Name="Blue Cross Number" Type="varchar" MaxLength="20" />
+          <Property Name="Medical Record Number" Type="char" MaxLength="8" />
+          <Property Name="Creation Operator ID" Type="char" MaxLength="3" />
+          <Property Name="Creation Date" Type="char" MaxLength="8" />
+          <Property Name="Update Date" Type="char" MaxLength="8" />
+          <Property Name="Update Operator" Type="char" MaxLength="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'MPI_Test.dbo.tblPatientInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tblPatientInfo">
+          <Key>
+            <PropertyRef Name="location" />
+            <PropertyRef Name="next_number" />
+          </Key>
+          <Property Name="location" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="next_number" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MPI_TestModelStoreContainer">
+          <EntitySet Name="SQLSmartAuditData" EntityType="Self.SQLSmartAuditData" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mas_patient" EntityType="Self.mas_patient" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [mas_patient].[Medical record number] AS [Medical record number], 
+    [mas_patient].[patient Number] AS [patient Number], 
+    [mas_patient].[patient Name] AS [patient Name]
+    FROM [dbo].[mas_patient] AS [mas_patient]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Sheet1$" EntityType="Self.Sheet1$" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Sheet1$].[Ambulatory Surgery] AS [Ambulatory Surgery], 
+    [Sheet1$].[500] AS [500]
+    FROM [dbo].[Sheet1$] AS [Sheet1$]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblExceptionsLog" EntityType="Self.tblExceptionsLog" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblExceptionsLog].[NumberofRecords] AS [NumberofRecords], 
+    [tblExceptionsLog].[RecordsImported] AS [RecordsImported], 
+    [tblExceptionsLog].[RecordsToAppend] AS [RecordsToAppend], 
+    [tblExceptionsLog].[RecordsNotAppended] AS [RecordsNotAppended], 
+    [tblExceptionsLog].[RecordsToAppend2] AS [RecordsToAppend2], 
+    [tblExceptionsLog].[RecordsNotAppended2] AS [RecordsNotAppended2], 
+    [tblExceptionsLog].[RecordsToDelete] AS [RecordsToDelete], 
+    [tblExceptionsLog].[RecordsNotDeleted] AS [RecordsNotDeleted], 
+    [tblExceptionsLog].[RecordsToDelete2] AS [RecordsToDelete2], 
+    [tblExceptionsLog].[RecordsNotDeleted2] AS [RecordsNotDeleted2], 
+    [tblExceptionsLog].[RecordsToUpdate] AS [RecordsToUpdate], 
+    [tblExceptionsLog].[RecordsNotUpdated] AS [RecordsNotUpdated], 
+    [tblExceptionsLog].[RecordsToUpdate2] AS [RecordsToUpdate2], 
+    [tblExceptionsLog].[RecordsNotUpdated2] AS [RecordsNotUpdated2], 
+    [tblExceptionsLog].[ProcessingDate] AS [ProcessingDate], 
+    [tblExceptionsLog].[ExceptionsProcessed] AS [ExceptionsProcessed], 
+    [tblExceptionsLog].[s_ColLineage] AS [s_ColLineage], 
+    [tblExceptionsLog].[s_Generation] AS [s_Generation], 
+    [tblExceptionsLog].[s_GUID] AS [s_GUID], 
+    [tblExceptionsLog].[s_Lineage] AS [s_Lineage]
+    FROM [dbo].[tblExceptionsLog] AS [tblExceptionsLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblLog" EntityType="Self.tblLog" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblLog].[username] AS [username], 
+    [tblLog].[mr] AS [mr], 
+    [tblLog].[account_number] AS [account_number], 
+    [tblLog].[date_time] AS [date_time], 
+    [tblLog].[patient_name] AS [patient_name]
+    FROM [dbo].[tblLog] AS [tblLog]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblMasterPatientIndex" EntityType="Self.tblMasterPatientIndex" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblMasterPatientIndex].[Flag] AS [Flag], 
+    [tblMasterPatientIndex].[Patient Number] AS [Patient Number], 
+    [tblMasterPatientIndex].[Patient Name] AS [Patient Name], 
+    [tblMasterPatientIndex].[Patient Street] AS [Patient Street], 
+    [tblMasterPatientIndex].[Patient City] AS [Patient City], 
+    [tblMasterPatientIndex].[Patient State] AS [Patient State], 
+    [tblMasterPatientIndex].[Patient Zip Code] AS [Patient Zip Code], 
+    [tblMasterPatientIndex].[Patient Phone] AS [Patient Phone], 
+    [tblMasterPatientIndex].[Social Security Number] AS [Social Security Number], 
+    [tblMasterPatientIndex].[Date Of Birth] AS [Date Of Birth], 
+    [tblMasterPatientIndex].[Sex Code] AS [Sex Code], 
+    [tblMasterPatientIndex].[Marital Status] AS [Marital Status], 
+    [tblMasterPatientIndex].[Race Code] AS [Race Code], 
+    [tblMasterPatientIndex].[Religion Code] AS [Religion Code], 
+    [tblMasterPatientIndex].[Medicare Number] AS [Medicare Number], 
+    [tblMasterPatientIndex].[Medicaid Number] AS [Medicaid Number], 
+    [tblMasterPatientIndex].[Blue Cross Number] AS [Blue Cross Number], 
+    [tblMasterPatientIndex].[Medical Record Number] AS [Medical Record Number], 
+    [tblMasterPatientIndex].[Creation Operator ID] AS [Creation Operator ID], 
+    [tblMasterPatientIndex].[Creation Date] AS [Creation Date], 
+    [tblMasterPatientIndex].[Update Date] AS [Update Date], 
+    [tblMasterPatientIndex].[Update Operator] AS [Update Operator]
+    FROM [dbo].[tblMasterPatientIndex] AS [tblMasterPatientIndex]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="tblPatientInfo" EntityType="Self.tblPatientInfo" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tblPatientInfo].[location] AS [location], 
+    [tblPatientInfo].[next_number] AS [next_number]
+    FROM [dbo].[tblPatientInfo] AS [tblPatientInfo]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MPI_TestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SQLSmartAuditData">
+          <Key>
+            <PropertyRef Name="AuditId" />
+          </Key>
+          <Property Name="AuditId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AuditDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="AuditType" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AuditTable" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AuditUser" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AuditMachine" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AuditApp" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AuditData" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="mas_patient">
+          <Key>
+            <PropertyRef Name="Medical_record_number" />
+          </Key>
+          <Property Name="Medical_record_number" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="patient_Number" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Name="patient_Name" Type="String" MaxLength="26" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Sheet1_">
+          <Key>
+            <PropertyRef Name="Ambulatory_Surgery" />
+          </Key>
+          <Property Name="Ambulatory_Surgery" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="C500" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tblExceptionsLog">
+          <Key>
+            <PropertyRef Name="ProcessingDate" />
+          </Key>
+          <Property Name="NumberofRecords" Type="Int32" />
+          <Property Name="RecordsImported" Type="Int32" />
+          <Property Name="RecordsToAppend" Type="Int32" />
+          <Property Name="RecordsNotAppended" Type="Int32" />
+          <Property Name="RecordsToAppend2" Type="Int32" />
+          <Property Name="RecordsNotAppended2" Type="Int32" />
+          <Property Name="RecordsToDelete" Type="Int32" />
+          <Property Name="RecordsNotDeleted" Type="Int32" />
+          <Property Name="RecordsToDelete2" Type="Int32" />
+          <Property Name="RecordsNotDeleted2" Type="Int32" />
+          <Property Name="RecordsToUpdate" Type="Int32" />
+          <Property Name="RecordsNotUpdated" Type="Int32" />
+          <Property Name="RecordsToUpdate2" Type="Int32" />
+          <Property Name="RecordsNotUpdated2" Type="Int32" />
+          <Property Name="ProcessingDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ExceptionsProcessed" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="s_ColLineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="s_Generation" Type="Int32" />
+          <Property Name="s_GUID" Type="Guid" />
+          <Property Name="s_Lineage" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="tblLog">
+          <Key>
+            <PropertyRef Name="username" />
+          </Key>
+          <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="account_number" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="date_time" Type="DateTime" Precision="3" />
+          <Property Name="patient_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblMasterPatientIndex">
+          <Key>
+            <PropertyRef Name="Flag" />
+          </Key>
+          <Property Name="Flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Patient_Number" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="Patient_Name" Type="String" MaxLength="26" FixedLength="false" Unicode="false" />
+          <Property Name="Patient_Street" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Patient_City" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Patient_State" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Patient_Zip_Code" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="Patient_Phone" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Social_Security_Number" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Of_Birth" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Sex_Code" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Marital_Status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Race_Code" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Religion_Code" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="Medicare_Number" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Medicaid_Number" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="Blue_Cross_Number" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Medical_Record_Number" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="Creation_Operator_ID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="Creation_Date" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="Update_Date" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="Update_Operator" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tblPatientInfo">
+          <Key>
+            <PropertyRef Name="location" />
+            <PropertyRef Name="next_number" />
+          </Key>
+          <Property Name="location" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="next_number" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="MPI_TestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SQLSmartAuditDatas" EntityType="Self.SQLSmartAuditData" />
+          <EntitySet Name="mas_patient" EntityType="Self.mas_patient" />
+          <EntitySet Name="Sheet1_" EntityType="Self.Sheet1_" />
+          <EntitySet Name="tblExceptionsLogs" EntityType="Self.tblExceptionsLog" />
+          <EntitySet Name="tblLogs" EntityType="Self.tblLog" />
+          <EntitySet Name="tblMasterPatientIndexes" EntityType="Self.tblMasterPatientIndex" />
+          <EntitySet Name="tblPatientInfoes" EntityType="Self.tblPatientInfo" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MPI_TestModelStoreContainer" CdmEntityContainer="MPI_TestEntities">
+          <EntitySetMapping Name="SQLSmartAuditDatas">
+            <EntityTypeMapping TypeName="MPI_TestModel.SQLSmartAuditData">
+              <MappingFragment StoreEntitySet="SQLSmartAuditData">
+                <ScalarProperty Name="AuditId" ColumnName="AuditId" />
+                <ScalarProperty Name="AuditDateTime" ColumnName="AuditDateTime" />
+                <ScalarProperty Name="AuditType" ColumnName="AuditType" />
+                <ScalarProperty Name="AuditTable" ColumnName="AuditTable" />
+                <ScalarProperty Name="AuditUser" ColumnName="AuditUser" />
+                <ScalarProperty Name="AuditMachine" ColumnName="AuditMachine" />
+                <ScalarProperty Name="AuditApp" ColumnName="AuditApp" />
+                <ScalarProperty Name="AuditData" ColumnName="AuditData" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mas_patient">
+            <EntityTypeMapping TypeName="MPI_TestModel.mas_patient">
+              <MappingFragment StoreEntitySet="mas_patient">
+                <ScalarProperty Name="Medical_record_number" ColumnName="Medical record number" />
+                <ScalarProperty Name="patient_Number" ColumnName="patient Number" />
+                <ScalarProperty Name="patient_Name" ColumnName="patient Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sheet1_">
+            <EntityTypeMapping TypeName="MPI_TestModel.Sheet1_">
+              <MappingFragment StoreEntitySet="Sheet1$">
+                <ScalarProperty Name="Ambulatory_Surgery" ColumnName="Ambulatory Surgery" />
+                <ScalarProperty Name="C500" ColumnName="500" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblExceptionsLogs">
+            <EntityTypeMapping TypeName="MPI_TestModel.tblExceptionsLog">
+              <MappingFragment StoreEntitySet="tblExceptionsLog">
+                <ScalarProperty Name="NumberofRecords" ColumnName="NumberofRecords" />
+                <ScalarProperty Name="RecordsImported" ColumnName="RecordsImported" />
+                <ScalarProperty Name="RecordsToAppend" ColumnName="RecordsToAppend" />
+                <ScalarProperty Name="RecordsNotAppended" ColumnName="RecordsNotAppended" />
+                <ScalarProperty Name="RecordsToAppend2" ColumnName="RecordsToAppend2" />
+                <ScalarProperty Name="RecordsNotAppended2" ColumnName="RecordsNotAppended2" />
+                <ScalarProperty Name="RecordsToDelete" ColumnName="RecordsToDelete" />
+                <ScalarProperty Name="RecordsNotDeleted" ColumnName="RecordsNotDeleted" />
+                <ScalarProperty Name="RecordsToDelete2" ColumnName="RecordsToDelete2" />
+                <ScalarProperty Name="RecordsNotDeleted2" ColumnName="RecordsNotDeleted2" />
+                <ScalarProperty Name="RecordsToUpdate" ColumnName="RecordsToUpdate" />
+                <ScalarProperty Name="RecordsNotUpdated" ColumnName="RecordsNotUpdated" />
+                <ScalarProperty Name="RecordsToUpdate2" ColumnName="RecordsToUpdate2" />
+                <ScalarProperty Name="RecordsNotUpdated2" ColumnName="RecordsNotUpdated2" />
+                <ScalarProperty Name="ProcessingDate" ColumnName="ProcessingDate" />
+                <ScalarProperty Name="ExceptionsProcessed" ColumnName="ExceptionsProcessed" />
+                <ScalarProperty Name="s_ColLineage" ColumnName="s_ColLineage" />
+                <ScalarProperty Name="s_Generation" ColumnName="s_Generation" />
+                <ScalarProperty Name="s_GUID" ColumnName="s_GUID" />
+                <ScalarProperty Name="s_Lineage" ColumnName="s_Lineage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblLogs">
+            <EntityTypeMapping TypeName="MPI_TestModel.tblLog">
+              <MappingFragment StoreEntitySet="tblLog">
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="mr" ColumnName="mr" />
+                <ScalarProperty Name="account_number" ColumnName="account_number" />
+                <ScalarProperty Name="date_time" ColumnName="date_time" />
+                <ScalarProperty Name="patient_name" ColumnName="patient_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblMasterPatientIndexes">
+            <EntityTypeMapping TypeName="MPI_TestModel.tblMasterPatientIndex">
+              <MappingFragment StoreEntitySet="tblMasterPatientIndex">
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Patient_Number" ColumnName="Patient Number" />
+                <ScalarProperty Name="Patient_Name" ColumnName="Patient Name" />
+                <ScalarProperty Name="Patient_Street" ColumnName="Patient Street" />
+                <ScalarProperty Name="Patient_City" ColumnName="Patient City" />
+                <ScalarProperty Name="Patient_State" ColumnName="Patient State" />
+                <ScalarProperty Name="Patient_Zip_Code" ColumnName="Patient Zip Code" />
+                <ScalarProperty Name="Patient_Phone" ColumnName="Patient Phone" />
+                <ScalarProperty Name="Social_Security_Number" ColumnName="Social Security Number" />
+                <ScalarProperty Name="Date_Of_Birth" ColumnName="Date Of Birth" />
+                <ScalarProperty Name="Sex_Code" ColumnName="Sex Code" />
+                <ScalarProperty Name="Marital_Status" ColumnName="Marital Status" />
+                <ScalarProperty Name="Race_Code" ColumnName="Race Code" />
+                <ScalarProperty Name="Religion_Code" ColumnName="Religion Code" />
+                <ScalarProperty Name="Medicare_Number" ColumnName="Medicare Number" />
+                <ScalarProperty Name="Medicaid_Number" ColumnName="Medicaid Number" />
+                <ScalarProperty Name="Blue_Cross_Number" ColumnName="Blue Cross Number" />
+                <ScalarProperty Name="Medical_Record_Number" ColumnName="Medical Record Number" />
+                <ScalarProperty Name="Creation_Operator_ID" ColumnName="Creation Operator ID" />
+                <ScalarProperty Name="Creation_Date" ColumnName="Creation Date" />
+                <ScalarProperty Name="Update_Date" ColumnName="Update Date" />
+                <ScalarProperty Name="Update_Operator" ColumnName="Update Operator" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblPatientInfoes">
+            <EntityTypeMapping TypeName="MPI_TestModel.tblPatientInfo">
+              <MappingFragment StoreEntitySet="tblPatientInfo">
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="next_number" ColumnName="next_number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

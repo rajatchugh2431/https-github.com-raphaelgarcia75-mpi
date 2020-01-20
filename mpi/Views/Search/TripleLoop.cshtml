@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewBag.Title = "TripleLoop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .triplelooptbl{
+        border:1px;
+        width:742px;
+        border-color:#9999FF
+    }
+    .tdpname{
+        width:296px;
+        background-color:#3A6DA4;
+        border-color:#000000;
+    }
+    .tdssn {
+        width: 122px;
+        background-color: #3A6DA4;
+        border-color: #000000;
+    }
+
+    .tdsex {
+        width: 41px;
+        background-color: #3A6DA4;
+        border-color: #000000;
+    }
+
+    .tddob {
+        width:110px;
+        background-color:#3A6DA4;
+        border-color:#000000;
+    }
+
+    .tdmedrec {
+        width:139px;
+        background-color:#3A6DA4;
+        border-color:#000000;
+    }
+    .tdpnamevalue{
+         width:296px;
+        background-color:#0099CC;
+        border-color:#000000;
+    }
+    .tdssnvalue {
+        width: 122px;
+        background-color: #0099CC;
+        border-color: #000000;
+    }
+    .tdsexvalue {
+        width: 41px;
+        background-color: #0099CC;
+        border-color: #000000;
+    }
+    .tddobvalue {
+        width: 110px;
+        background-color: #0099CC;
+        border-color: #000000;
+    }
+    .tdmedrecvalue {
+        width: 139px;
+        background-color: #0099CC;
+        border-color: #000000;
+    }
+</style>
+<center>
+    <b>Select a Name in the List to See Detailed Patient Infomation</b>
+    <br>
+</center>
+    <table class="triplelooptbl" col="5" cellspace="10" align="center">
+        <tr>
+            <td class="tdpname">
+                <div align="center"><b><font color="#FFFFFF">Patient Name </font></b></div>
+            </td>
+
+            <td class="tdssn">
+                <div align="center"><b><font color="#FFFFFF">SSN </font></b></div>
+            </td>
+            <td class="tdsex">
+                <div align="center"><b><font color="#FFFFFF">Sex</font></b></div>
+            </td>
+            <td class="tddob">
+                <div align="center"><b><font color="#FFFFFF">DOB</font></b></div>
+            </td>
+            <td class="tdmedrec">
+                <div align="center"><b><font color="#FFFFFF">Medical Record#</font></b></div>
+            </td>
+            <!-- <td width="108" bgcolor="#3A6DA4" bordercolor="#000000">
+           <div align="center"><b><font color="#FFFFFF">patient number</font></b></div>
+         </td> -->
+        </tr>
+        
+
+        <tr>
+
+            <td class="tdpnamevalue">
+                <div align="left">
+                    <a href="#">
+                        <font color="#FFFFFF"><b></b></font>
+                    </a>
+                </div>
+            </td>
+            <td class="tdssnvalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                        
+                    </font>
+                </div>
+            </td>
+            <td class="tdsexvalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+
+            <td class="tddobvalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                        
+                    </font>
+                </div>
+            </td>
+            <td class="tdmedrecvalue">
+                <div align="right">
+                    <font color="#FFFFFF">
+                       
+                    </font>
+                </div>
+            </td>
+
+            <!--<td width="108" bgcolor="#0099CC" bordercolor="#000000">
+          <div align="center"> <font color="#FFFFFF"><%=connection("patient number")%>
+            </font></div>
+        </td> -->
+        </tr>
+    </table>
+

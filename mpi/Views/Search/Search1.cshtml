@@ -1,0 +1,183 @@
+﻿
+@{
+    ViewBag.Title = "Search1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .searchtbl{
+          border: 1px;
+        border-color: #9999FF;
+        width:53%;
+        height:245px;
+    }
+    .searchtbl tr{
+        border-color:#9999FF;
+    }
+    .tdsearchoption{
+         height:27px;
+         background-color:#3A6DA4;
+    }
+    .tdpatientname {
+        
+        background-color: #3A6DA4;
+        width: 36%;
+        height: 49px;
+    }
+    .tdpatientnametxt{
+        background-color: #0099CC;
+        width: 26%;
+        height: 49px;
+    }
+    .tdpatientnamex{
+        background-color: #0099CC;
+        width: 38%;
+        height: 49px;
+    }
+    .tdsex{
+         background-color: #3A6DA4;
+        width: 36%;
+        height: 41px;
+    }
+    .tdsexddl{
+       background-color: #0099CC;
+        width: 26%;
+        height: 41px;
+    }
+    .tduse{
+        background-color: #0099CC;
+        width: 38%;
+        height: 41px;
+    }
+    .tdssn{
+         background-color: #3A6DA4;
+        width: 36%;
+        height: 46px;
+    }
+    .tdssntxt{
+         background-color: #0099CC;
+        width: 26%;
+        height: 46px;
+    }
+    .tdssntxtex{
+ background-color: #0099CC;
+        width: 38%;
+        height: 46px;
+    }
+    .tdpatientno{
+        background-color: #3A6DA4;
+        width: 36%;
+        height: 45px;
+    }
+    .tdpatientnotxt{
+        background-color: #0099CC;
+        width: 26%;
+        height: 45px;
+    }
+    .tdempty{
+        background-color: #3A6DA4;
+        width: 36%;
+        height: 30px;
+    }
+    .tdbtn{
+        width: 26%;
+        height: 30px;
+    }
+    .tdempty2{
+         background-color: #0099CC;
+        width: 38%;
+        height: 30px;
+    }
+</style>
+<center>
+    <b>Welcome</b>
+    <br>
+</center>
+    <table class="searchtbl" aligh="center"  align="center">
+        <tr>
+            <td class="tdsearchoption" colspan="3">
+                <div align="center">
+                    <font color="#FFFFFF" size="4">
+                        Please Select One Of
+                        The Three Search Options
+                    </font>
+                </div>
+                </td>
+        </tr>
+        <tr>
+            <td class="tdpatientname">
+                <div align="center"><b><font color="#FFFFFF">Patient Name:</font></b></div></td>
+            <td class="tdpatientnametxt" valign="middle" align="center">
+                <div align="center">
+                    <input type="text" name="patientname" size="20">
+                </div>
+            </td>
+            <td class="tdpatientnamex" valign="middle" align="center">
+                <font color="#FFFFFF">
+                    Ex:
+                    Doe, John or Doe or Doe, J
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdsex">
+                <div align="center"><b><font color="#FFFFFF"> Sex:</font></b></div>
+            <td class="tdsexddl" valign="middle" align="center">
+                <div align="center">
+                    <font color="#3A6DA4">
+                        <select name="sexcode" size="1">
+                            <option selected value="">------------</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                        </select>
+                    </font>
+                </div>
+            </td>
+            <td class="tduse" valign="middle" align="center">
+                <font color="#FFFFFF">
+                    <b>
+                        <i>
+                            Use only with
+                            Patient Name
+                        </i>
+                    </b>
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdssn">
+                <div align="center"><b><font color="#FFFFFF"> SSN:</font></b></div>
+                </td>
+            <td class="tdssntxt"  valign="middle" align="center">
+                <div align="center">
+                    <input type="text" name="SSN" size=20">
+                </div>
+            </td>
+            <td class="tdssntxtex" valign="middle" align="center">
+                <font color="#FFFFFF">
+                    Ex:<br>
+                    012-34-5678
+                </font>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdpatientno">
+                <div align="center"><b><font color="#FFFFFF">Patient#:</font></b></div></td>
+            <td class="tdpatientnotxt" valign="middle" align="center">
+                <div align="center">
+                    <input type="text" name="PatientNumber" size="20">
+                </div>
+            </td>
+            <td width="38%" height="45" bgcolor="#0099CC" valign="middle" align="center">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="tdempty">
+                <div align="center"></div></td>
+            <td class="tdbtn">
+                <div align="center">
+                    <input type="SUBMIT" name="go" size="16" value="GO">
+                    <input type="reset" name="reset" size="4" value="Reset">
+                </div>
+                </td>
+            <td class="tdempty2">&nbsp;</td>
+        </tr>
+    </table>

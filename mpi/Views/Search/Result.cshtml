@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewBag.Title = "Result";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .resulttbl {
+        border: 1px;
+        border-color: #6b8e23;
+    }
+    .tdpname, .tdpatientloc {
+        width: 160px;
+        background-color: #6b8e23;
+        border-color: #000000;
+    }
+    .tdmedrecno, .tdsrno {
+        width: 130px;
+        background-color: #6b8e23;
+        border-color: #000000;
+    }
+    .tdpnamevalue, .tdpatientlocvalue {
+        width: 160px;
+        background-color: white;
+        border-color: #000000;
+    }
+    .tdmedrecnovalue, .tdsrnovalue {
+        width: 130px;
+        background-color: white;
+        border-color: #000000;
+    }
+    .tblback{
+          border: 1px;
+        border-color: #9999ff;
+        margin-top:5px;
+    }
+    .tblback tr{
+         border-color: #9999ff;
+    }
+    .tdback{
+ width: 100%;
+ height:30px;
+    }
+</style>
+<center>
+        <b>Please Record Following Patient Information</b>
+    <br>
+</center>
+<table class="resulttbl" align="center" cellspace="10" col="4">
+    <tr>
+        <td class="tdpname">
+            <div align="center"><b><font color="#ffffff">Patient Name </font></b></div>
+        </td>
+
+        <td class="tdmedrecno">
+            <div align="center"><b><font color="#ffffff">Medical Record#</font></b></div>
+        </td>
+
+        <td class="tdsrno">
+            <div align="center"><b><font color="#ffffff">Serial Number</font></b></div>
+        </td>
+
+        <td class="tdpatientloc">
+            <div align="center"><b><font color="#ffffff">Patient Location</font></b></div>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="tdpnamevalue">
+            <div align="left"><font color="black"></font></div>
+        </td>
+
+        <td class="tdmedrecnovalue">
+            <div align="left"><font color="black"></font></div>
+        </td>
+
+        <td class="tdsrnovalue">
+            <div align="left"><font color="black"> </font></div>
+        </td>
+
+        <td class="tdpatientlocvalue">
+            <div align="left"> <font color="black"></font></div>
+        </td>
+
+    </tr>
+</table>
+
+
+<table class="tblback"  align="center" cellspace="10" col="1">
+    <tr>
+        <div align="center"></div>
+        <td class="tdback">
+            <div align="center">
+                <input type="submit" name="go" size="16" value="Back">
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+

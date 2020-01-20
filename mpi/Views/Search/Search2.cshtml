@@ -1,0 +1,139 @@
+﻿
+@{
+    ViewBag.Title = "Search2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .searchtbl2{
+        border:1px;
+        width:500px;
+        height:245px;
+        border-color:#6B8E23;
+    }
+    .searchtbl2 tr{
+        border-color:#6B8E23;
+    }
+    .tddowntime{
+        height:27px;
+        background-color:#6B8E23;
+    }
+    .tdpname{
+         width:25%;
+        height:30px;
+       background-color:#6B8E23;
+    }
+    .tdpnamevalue{
+         width:26%;
+        height:30px;
+       background-color:#9ACD32;
+    }
+    .tdpnamevaluex{
+         width:38%;
+        height:30px;
+       background-color:#6B8E23;
+    }
+    .tdploc{
+        width:36%;
+        height:30px;
+       background-color:#6B8E23;
+    }
+    .tdplocddl{
+         width:26%;
+        height:30px;
+       background-color:#9ACD32;
+    }
+    .tdempty,.tdempty2{
+  width:38%;
+        height:30px;
+       background-color:#6B8E23;
+    }
+    .tdsrno{
+        width:36%;
+        height:30px;
+       background-color:#6B8E23;
+    }
+    .tdsrnoddl{
+          width:26%;
+        height:30px;
+       background-color:#9ACD32;
+    }
+    .tdbutton{
+        width:36%;
+        height:30px;
+       background-color:#6B8E23;
+    }
+    .tdsubmit{
+         width:26%;
+        height:30px;
+    }
+</style>
+    <table class="searchtbl2" cellpadding="0" aligh="center"  align="center">
+        <tr>
+            <td colspan="3" class="tddowntime">
+                <div align="center"><font color="#FFFFFF" size="4">Downtime Numbers</font></div>
+        </tr>
+        <tr>
+            <td align="left" class="tdpname">
+                <div align="left"><b><font color="#FFFFFF">Patient Name:</font></b></div></td>
+            <td class="tdpnamevalue" valign="middle" align="center">
+                <div align="center">
+                    <input type="text" name="patientname" size="27">
+                </div>
+            </td>
+            <td class="tdpnamevaluex" valign="middle" align="center"><font color="#FFFFFF">Ex: Doe, John or Doe or Doe, J</font></td>
+        </tr>
+        <tr>
+            <td class="tdploc">
+                <div align="left"><b><font color="#FFFFFF"> Patient Location:</font></b></div>
+            <td class="tdplocddl" valign="middle" align="center">
+                <div align="center">
+                    <font color="#3A6DA4">
+                        <select name="location" size="1">
+                            <option selected value="">Select Location</option>
+                            <option value=""></option>
+                            <option value="IP-Medical/Surgical">IP-Medical/Surgical</option>
+                            <option value="IP-Maternity">IP-Maternity</option>
+                            <option value="IP-Newborn">IP-Newborn</option>
+                            <option value="IP-Mental Health">IP-Mental Health</option>
+                            <option value="Emergency Department">Emergency Department</option>
+                            <option value="ER-See & Advise">ER-See & Advise</option>
+                            <option value="Ambulatory Surgery">Ambulatory Surgery</option>
+                            <option value="Pre Admit Testing">Pre Admit Testing</option>
+                            <option value="Referred Ambulatory">Referred Ambulatory</option>
+                            <option value="OPD Clinics">OPD Clinics</option>
+                            <option value="OPD Mental Health">OPD Mental Health</option>
+                        </select>
+                    </font>
+                </div>
+            </td>
+            <td class="tdempty" valign="middle" align="center"><font color="#FFFFFF"><b><i></b></font></td>
+        </tr>
+        <tr>
+            <td class="tdsrno">
+                <div align="left"><b><font color="#FFFFFF">Serial/MR Number:</font></b></div>
+            <td class="tdsrnoddl" valign="middle" align="center">
+                <div align="left">
+                    <font color="#3A6DA4">
+                        <select name="data" size="1">
+                            <option selected value="">Select The Following</option>
+                            <option value=""></option>
+                            <option value="Serial Number Only">Serial Number Only</option>
+                            <option value="M.R. And Serial Number">M.R. And Serial Number&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </option>
+                        </select>
+                    </font>
+                </div>
+            <td class="tdempty2" width="38%" height="30" bgcolor="#6B8E23">&nbsp;
+        </tr>
+        <tr>
+            <td class="tdbutton">
+                <div align="center"></div>
+            <td class="tdsubmit">
+                <div align="center">
+                    <input type="SUBMIT" name="go" size="16" value="GO">
+                    <input type="reset" name="reset" size="4" value="Reset">
+                </div>
+            <td class="tdempty2">&nbsp;
+        </tr>
+
+    </table>
+

@@ -1,0 +1,53 @@
+﻿
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title -Maimonides Medical Center: MPI User Access</title>
+    @*@Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")*@
+    <style>
+        .body-content{
+            padding:15px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container body-content">
+        <div align="center"><IMG height=83 src="images/mmc.jpg" width=400> <br> <br></div>
+        <center>
+            Your Search Criteria: <u>
+            </u>
+            @*<br><br>
+            <b>Please Record Following Patient Information</b>*@
+            <br>
+        </center>
+
+        <center>
+            
+            <br>
+           
+            <a href="/User/Users">User Access</a> &nbsp;|
+            <a href="/User/UserAct">User Activity</a> &nbsp;|
+            <a href="/User/UserMenu">View/Delete Users </a>&nbsp;|
+
+           
+            <a href="/Search/Search1">MPI Search</a>&nbsp;|
+            <a href="/Search/Search2">Downtime Numbers</a> &nbsp;|
+            <a href="/Account/Logout">Logout</a><br>
+            <br>
+
+        </center>
+        @RenderBody()
+        <hr />
+        <footer>
+            <div align="center"><br>MPISS Version 1.0 <br>	©2002 Maimonides Medical Center </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿
+@{
+    ViewBag.Title = "UserMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+.usermenutbl{
+    width:75%;
+    border:1px;
+    border-color:#9999FF;
+    background-color:#FFFFFF;
+}
+.usermenutbl tr{
+    background-color:#3A6DA4;
+}
+.trbg{
+    background-color:#0099CC !important;
+}
+    .useridtd {
+        width: 93px;
+        border-color: #9999FF;
+    }
+    .nametd {
+        width: 113px;
+        border-color: #9999FF;
+    }
+.lastnametd{
+     width:116px;
+    border-color:#9999FF;
+}
+    .emailtd {
+        width: 129px;
+        border-color: #9999FF;
+    }
+    .leveltd{
+         width: 87px;
+        border-color: #9999FF;
+    }
+    .emptytd{
+        width: 57px;
+        border-color: #9999FF;
+    }
+    .useridtdData{
+        width:93px;
+    }
+    .nametdData{
+        width:113px;
+        background-color:#0099CC;
+    }
+    .lastnametdData{
+         width:116px;
+    }
+    .emailtdData{
+        width:129px;
+    }
+    .leveltdData{
+     width: 87px;
+    }
+    .deltdData{
+        width:57px;
+    }
+</style>
+    <table class="usermenutbl" align="center">
+        <tr>
+            <th colspan="6">
+                <div align="center">
+                    <font color="#FFFFFF" size="5">
+                        User Access Information
+                    </font>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <td class="useridtd">
+                <div align="center"><b><font color="#FFFFFF">User Id </font></b></div>
+            </td>
+            <td class="nametd">
+                <div align="center"><b><font color="#FFFFFF">First Name </font></b></div>
+            </td>
+            <td class="lastnametd">
+                <div align="center"><b><font color="#FFFFFF">Last Name </font></b></div>
+            </td>
+            <td class="emailtd">
+                <div align="center"><b><font color="#FFFFFF">Email </font></b></div>
+            </td>
+            <td class="leveltd">
+                <div align="center"><b><font color="#FFFFFF">level</font></b></div>
+            </td>
+            <td class="emptytd"><b><font color="#FFFFFF"></font> </b></td>
+        </tr>
+        <tr class="trbg">
+            <td class="useridtdData">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="nametdData">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="lastnametdData">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="emailtdData">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="leveltdData">
+                <div align="center">
+                    <font color="#FFFFFF">
+                       
+                    </font>
+                </div>
+            </td>
+            <td class="deltdData">
+                <div align="center">
+                    <a href="#"><font color="#FFFFFF">
+                            DELETE
+                        </font>
+                    </a>
+                </div>
+            </td>
+        </tr>
+    </table>
+

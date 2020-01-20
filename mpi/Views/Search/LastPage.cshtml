@@ -1,0 +1,373 @@
+﻿
+@{
+    ViewBag.Title = "LastPage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .lastpagetbl{
+        width:92%;
+        border:1px;
+    }
+    .lastpagetbl tr{
+        border-color:#9999FF;
+    }
+    .Patientinfo{
+        background-color:#3A6DA4;
+        text-align: center;
+    }
+    .tdpatientname {
+        height: 45px;
+    }
+
+    .tdphone {
+        height: 21px;
+        width: 17%;
+        background-color: #3A6DA4;
+    }
+    .tdphonevalue{
+         height:21px;
+         width:16%;
+         background-color:#0099CC;
+    }
+    .tdstatus{
+        height:21px;
+         width:19%;
+         background-color:#3A6DA4;
+    }
+    .tdstatusvalue{
+         height:21px;
+         width:12%;
+         background-color:#0099CC;
+    }
+    .tdssn{
+        height:20px;
+         width:17%;
+         background-color:#3A6DA4;
+         border-color:#9999FF
+    }
+    .tdssnvalue{
+        height:20px;
+         width:16%;
+         background-color:#0099CC;
+         border-color:#9999FF;
+    }
+    .tdrace{
+         height:20px;
+         width:19%;
+         background-color:#3A6DA4;
+         border-color:#9999FF;
+    }
+    .tdracevalue{
+         height:20px;
+         width:12%;
+         background-color:#0099CC;
+         border-color:#9999FF;
+    }
+    .tddob{
+        height:28px;
+         width:17%;
+         background-color:#3A6DA4;
+         border-color:#9999FF;
+    }
+    .tddobvalue{
+        height:28px;
+         width:16%;
+         background-color:#0099CC;
+         border-color:#9999FF;
+    }
+    .tdreligion{
+         height:28px;
+         width:19%;
+         background-color:#3A6DA4;
+         border-color:#9999FF;
+    }
+    .tdreligionvalue{
+         height:28px;
+         width:12%;
+         background-color:#0099CC;
+         border-color:#9999FF;
+    }
+    .tdsex{
+        height:5px;
+         width:17%;
+         background-color:#3A6DA4;
+         border-color:#9999FF;
+    }
+    .tdsexvalue{
+        height:5px;
+         width:16%;
+         background-color:#0099CC;
+         border-color:#9999FF;
+    }
+    .tdempty{
+        height:5px;
+         border-color:#9999FF;
+    }
+    .tdmedinfo{
+        background-color:#3A6DA4;
+        text-align:center;
+    }
+    .tdmedrecord{
+         width:19%;
+         background-color:#3A6DA4;
+        
+    }
+    .tdmedrecordvalue{
+        width:17%;
+         background-color:#0099CC;
+    }
+    .tdmedid{
+        background-color:#3A6DA4;
+        width:17%;
+    }
+    .tdmedidvalue{
+        background-color:#0099CC;
+        width:16%;
+    }
+    .tdbluecross{
+         background-color:#3A6DA4;
+        width:19%;
+    }
+    .tdbluecrossvalue{
+         background-color:#0099CC;
+        width:12%;
+    }
+    .tdmedcare{
+        background-color:#FFFFFF;
+    }
+    .tdmedcare2{
+ background-color:#3A6DA4;
+        width:17%;
+    }
+    .tdmedcarevalue{
+        width:16%;
+        background-color:#0099CC;
+    }
+    .tdpatientno{
+        width:19%;
+        background-color:#3A6DA4;
+    }
+    .tdpatientnovalue{
+         width:12%;
+        background-color:#0099CC;
+    }
+    .tdrecordinfo{
+        background-color:#3A6DA4;
+        text-align:center;
+    }
+    .tdoperator{
+        width:19%;
+        background-color:#3A6DA4;
+    }
+    .tdoperatorvalue{
+          width:17%;
+        background-color:#0099CC;
+    }
+    .creationdate{
+       width:17%;
+        background-color:#3A6DA4;
+    }
+    .creationdatevalue{
+        width:16%;
+        background-color:#0099CC;
+    }
+    .tdsearchon{
+        background-color:#FFFFFF;
+    }
+    .tdupdateoper{
+        width:19%;
+        background-color:#3A6DA4;
+    }
+    .tdupdateopervalue{
+        width:17%;
+        background-color:#0099CC;
+    }
+    .tdupdate{
+        width:17%;
+         background-color:#3A6DA4;
+    }
+    .tdupdatevalue{
+         width:16%;
+        background-color:#0099CC;
+    }
+</style>
+<h2 align="center">Patient Information Detail</h2>
+    <table class="lastpagetbl" align="center">
+        <tr>
+            <th class="Patientinfo" colspan="6">
+                <font color="#FFFFFF">
+                    <b>
+                        <font size="5">
+                            Patient
+                            Information
+                        </font>
+                    </b>
+                </font>
+            </th>
+        </tr>
+        <tr>
+            <td class="tdpatientname" rowspan="4" colspan="2">
+                <div align="center">
+                    <br>
+                </div>
+            </td>
+            <td class="tdphone">
+                <div align="center"><b><font color="#FFFFFF">Phone</font></b></div>
+            </td>
+            <td class="tdphonevalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="tdstatus">
+                <div align="center"><b><font color="#FFFFFF">Marital Status</font></b></div>
+            </td>
+            <td  class="tdstatusvalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdssn">
+                <div align="center"><b><font color="#FFFFFF">SSN</font></b></div>
+            </td>
+            <td class="tdssnvalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="tdrace">
+                <div align="center"><b><font color="#FFFFFF">Race Code</font></b></div>
+            </td>
+            <td class="tdracevalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tddob">
+                <div align="center"><b><font color="#FFFFFF">DOB</font></b></div>
+            </td>
+            <td class="tddobvalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="tdreligion">
+                <div align="center"><b><font color="#FFFFFF">Religion Code</font></b></div>
+            </td>
+            <td class="tdreligionvalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdsex" >
+                <div align="center"><b><font color="#FFFFFF">Sex</font></b></div>
+            </td>
+            <td class="tdsexvalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+            <td class="tdempty" colspan="2">
+                <div align="center"></div>
+            </td>
+        </tr>
+        <tr>
+            <th class="tdmedinfo" colspan="6"><font color="#FFFFFF" size="5">Medical Information</font></th>
+        </tr>
+        <tr>
+            <td class="tdmedrecord">
+                <div align="center"><font color="#FFFFFF"><b>Medical Record #</b></font></div>
+            </td>
+            <td class="tdmedrecordvalue">
+                <div align="center"><font color="#FFFFFF"><b></b></font></div>
+            </td>
+            <td class="tdmedid">
+                <div align="center"><font color="#FFFFFF"><b>Medicaid #</b></font></div>
+            </td>
+            <td class="tdmedidvalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                        
+                    </font>
+                </div>
+            </td>
+            <td  class="tdbluecross">
+                <div align="center"><font color="#FFFFFF"><b>Blue Cross #</b></font></div>
+            </td>
+            <td class="tdbluecrossvalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                       
+                    </font>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdmedcare" colspan="2">&nbsp;</td>
+            <td class="tdmedcare2">
+                <div align="center"><font color="#FFFFFF"><b>Medicare #</b></font></div>
+            </td>
+            <td class="tdmedcarevalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                        
+                    </font>
+                </div>
+            </td>
+            <td class="tdpatientno">
+                <div align="center"><font color="#FFFFFF"><b>Patient Number</b></font></div>
+            </td>
+            <td class="tdpatientnovalue">
+                <div align="center"><font color="#FFFFFF"></font></div>
+            </td>
+        </tr>
+        <tr>
+            <th colspan="6" class="tdrecordinfo"><font size="5" color="#FFFFFF">Record Information</font></th>
+        </tr>
+        <tr>
+            <td class="tdoperator">
+                <div align="center"><b><font color="#FFFFFF">Creation Operator</font></b></div>
+            </td>
+            <td class="tdoperatorvalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                        
+                    </font>
+                </div>
+            </td>
+            <td class="creationdate">
+                <div align="center"><font color="#FFFFFF"><b>Creation Date</b></font></div>
+            </td>
+            <td class="creationdatevalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                        
+                    </font>
+                </div>
+            </td>
+            <td colspan="2" class="tdsearchon"  rowspan="2">
+                <div align="center">
+                    Searched on: <b>
+                       
+                    </b>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdupdateoper">
+                <div align="center"><b><font color="#FFFFFF">Update Operator</font></b></div>
+            </td>
+            <td class="tdupdateopervalue">
+                <div align="center">
+                    <font color="#FFFFFF">
+                        
+                    </font>
+                </div>
+            </td>
+            <td class="tdupdate">
+                <div align="center"><font color="#FFFFFF"><b>Update Date</b></font></div>
+            </td>
+            <td class="tdupdatevalue">
+              
+                <div align="center"><font color="#FFFFFF"></font></div>
+               
+                <div align="center"><font color="#FFFFFF"></font></div>
+               
+
+                <!-- <div align="center"><font color="#FFFFFF"><%=details("Update Date")%> </font></div>-->
+            </td>
+        </tr>
+    </table>
+

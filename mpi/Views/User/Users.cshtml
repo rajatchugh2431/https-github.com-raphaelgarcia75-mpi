@@ -1,0 +1,182 @@
+﻿
+@{
+    ViewBag.Title = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .usertbl{
+        border:1px;
+        width:339px;
+        height:1px;
+        margin-top:5px;
+    }
+    .tdfirstname, .tdemail {
+        width: 190px;
+        height: 1px;
+        background-color: #3A6DA4;
+        border-color: #9999FF;
+    }
+    .tdlastname{
+        width:133px;
+        height:5px;
+        background-color:#3A6DA4;
+        border-color:#9999FF;
+    }
+    .tdfirstnametxt{
+        width:190px;
+        height:26px;
+        background-color:#0099CC;
+        border-color:#9999FF;
+    }
+    .tdlastnametxt{
+        width:133px;
+        height:25px;
+        background-color:#0099CC;
+        border-color:#9999FF;
+    }
+    .tdemail{
+        width:190px;
+        height:1px;
+        background-color:#3A6DA4;
+        border-color:#9999FF;
+    }
+    .tdaccesslevel{
+        width:133px;
+        height:1px;
+        background-color:#3A6DA4;
+        border-color:#9999FF;
+    }
+    .tdemailtxt{
+        width:190px;
+        height:25px;
+        background-color:#0099CC;
+        border-color:#9999FF;
+    }
+    .tdaccesslevelselect{
+        width:133px;
+        height:25px;
+        background-color:#0099CC;
+        border-color:#9999FF;
+    }
+    .tdpwd{
+         width:190px;
+        height:15px;
+        background-color:#3A6DA4;
+        border-color:#9999FF;
+    }
+    .tdsubmit{
+        height:80px;
+        border-color:#9999FF;
+    }
+    .tdpwdtxt{
+        width:190px;
+        height:14px;
+        background-color:#0099CC;
+        border-color:#9999FF;
+    }
+    .tdretypepwd {
+        width: 190px;
+        height: 3px;
+        background-color: #3A6DA4;
+        border-color: #9999FF;
+    }
+    .tdretypepwdtxt{
+        width:190px;
+        height:11px;
+        background-color:#0099CC;
+        border-color:#9999FF;
+    }
+    .lasttd1{
+        width:190px;
+        height:1px;
+    }
+    .lasttd2{
+         width:133px;
+        height:1px;
+    }
+</style>
+<div align="center">
+    <br>
+
+    <img src="images/usermaint.gif" width="180" height="35"> <br>
+    <table class="usertbl">
+
+        <tr>
+            <td class="tdfirstname">
+                <p align="center">
+                    <b><font color="#FFFFFF">User's First Name: </font></b>
+                </p>
+            </td>
+            <td class="tdlastname" valign="middle">
+                <p align="center"><font color="#FFFFFF"><b>User's Last Name:</b></font></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdfirstnametxt">
+                <p align="center">
+                    <input type="text" name="userfirstname" value="">
+
+            </td>
+            <td class="tdlastnametxt" valign="top">
+                <p align="center">
+                    <input type="text" name="userlastname" value="" OnChange="javascript:emailcreate(this.form);">
+            </td>
+        </tr>
+        <tr>
+            <td class="tdemail" valign="middle">
+                <p align="center"> <font color="#FFFFFF"><b>User's Email Address: </b></font>
+            </td>
+            <td class="tdaccesslevel" valign="middle">
+                <p align="center"><font color="#FFFFFF"><b>Access Level: </b></font>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdemailtxt" valign="middle">
+                <p align="center">
+                    <input type="text" name="useremail">
+            </td>
+            <td class="tdaccesslevelselect" valign="middle">
+                <p align="center">
+                    <select name="accesslevel">
+                        <option selected value="">-----------------------------</option>
+                        <option value="1">General Access</option>
+                        <option value="100">Administrative Access</option>
+                    </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdpwd" valign="middle">
+                <p align="center"> <b><font color="#FFFFFF">Password: </font></b> </p>
+            </td>
+            <td class="tdsubmit" align="center" valign="middle" rowspan="4">
+                <p align="center">
+                    <input type="submit" name="Submit" value="Submit">
+            </td>
+        </tr>
+        <tr>
+            <td class="tdpwdtxt" valign="middle">
+                <p align="center">
+                    <input type="password" name="txtpassword">
+            </td>
+        </tr>
+        <tr>
+            <td class="tdretypepwd" valign="middle">
+                <p align="center">
+                    <font color="#FFFFFF"><b>Retype Password: </b></font>
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <td class="tdretypepwdtxt" valign="middle">
+                <p align="center">
+                    <input type="password" name="txtpassword2">
+            </td>
+        </tr>
+        <tr>
+            <td class="lasttd1" valign="top"> </td>
+            <td class="lasttd2" valign="top"> </td>
+        </tr>
+
+    </table>
+
+    </div>

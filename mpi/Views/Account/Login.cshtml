@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+<style>
+    .loginformdiv{
+        text-align:center;
+    }
+    .errorb{
+        display:none;
+    }
+    .logintbl {
+        width: 37%;
+        border: 1px;
+        height: 124px;
+        text-align: center;
+    }
+    .logintbl tr{
+        border-color:#9999FF;
+    }
+    .tdsearch{
+        height:42px;
+        background-color:#3A6DA4;
+    }
+    .tdsearch div{
+        text-align:center;
+    }
+    .loginidtd{
+        width:33%;
+        height:44px;
+        background-color:#3A6DA4;
+    }
+    .loginidtd div{
+        text-align:center;
+    }
+    .loginidtxt{
+        width:67%;
+        height:44px;
+        background-color:#0099CC;
+        text-align:center;
+        vertical-align:middle;
+        border-color:#9999FF;
+    }
+    .passwordtd{
+        width:33%;
+        height:42px;
+        background-color:#3A6DA4;
+    }
+    .passwordtd div{
+        text-align:center;
+    }
+    .passwordtxt{
+        width:67%;
+        height:42px;
+        background-color:#0099CC;
+        text-align:center;
+        vertical-align:middle;
+    }
+    .emptytd{
+        width:33%;
+        height:2px;
+        background-color:#3A6DA4;
+        
+    }
+    .emptytd td{
+        width:67%;
+        height:2px;
+    }
+</style>
+<div class="loginformdiv" align="center">
+    <b class="errorb">
+        <font color="red">
+            Either the username or password
+            is incorrect
+        </font>
+    </b><br>
+    <br>
+
+    <table class="logintbl" align="center">
+        <tr>
+            <td class="tdsearch" colspan="2">
+                <div align="center">
+                    <font face="Georgia, Times New Roman, Times, serif" color="#FFFFFF">
+                        <b>
+                            <font size="2">
+                                Master
+                                Patient Index Search System
+                            </font>
+                        </b>
+                    </font>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="loginidtd">
+                <div align="center"><b><font color="#FFFFFF">Login ID:</font></b></div>
+            </td>
+            <td class="loginidtxt" align="center">
+                <input type="text" name="LoginID" size="20">
+            </td>
+        </tr>
+        <tr>
+            <td class="passwordtd">
+                <div align="center"><b><font color="#FFFFFF">Password:</font></b></div>
+            </td>
+            <td class="passwordtxt" align="center">
+                <input type="PASSWORD" name="txtpassword" size="20">
+            </td>
+        </tr>
+        <tr>
+            <td class="emptytd">&nbsp;</td>
+            <td>
+                <div align="center">
+                    <input type="submit" name="Submit" value="Submit">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <!--<p>Forgot your password? <a href="#" onClick="openBrWindow('forgotpassword.asp','MMC','width=300,height=200')">Click
+      Here</a><br>
+    </p> -->
+    
+</div>
